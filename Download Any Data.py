@@ -36,10 +36,9 @@ def eoddata(symbol):
 #INTRADAY DATA
 def intraday(symbol,intratimeframe):
     intradaydata = ts.get_intraday(symbol=symbol,interval = intratimeframe,outputsize = 'full');
-    fdf = pd.DataFrame(intradaydata[0]);
-    fdf.dropna(inplace = True);
-    fdf = fdf[fdf['5. volume']>1];
-    fdf.to_csv('D:\\Python Exercices\\DataFiles\\IntradayData.csv',sep = ',');
+    intradf = pd.DataFrame(intradaydata[0]);
+    intradf.dropna(inplace = True);
+    intradf.to_csv('D:\\Python Exercices\\DataFiles\\IntradayData.csv',sep = ',');
 
 
 
