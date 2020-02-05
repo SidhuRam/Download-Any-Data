@@ -42,7 +42,7 @@ def intraday(symbol,intratimeframe):
     intradf.dropna(inplace = True);
     intradf.columns =['Date','Open','High','Low','Close','Volume']
     intradf.sort_values(by='Date', ascending=True, inplace = True)
-    intradf.to_csv('C:\\Python Exercises\\DataFiles\\'+symbol+intratimeframe+'_IntradayData.csv',sep = ',');
+    intradf.to_csv('C:\\Python Exercises\\DataFiles\\'+symbol+'_'+intratimeframe+'_IntradayData.csv',sep = ',');
 
 
 
