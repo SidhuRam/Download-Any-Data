@@ -31,9 +31,9 @@ def eoddata(symbol):
     eoddf.dropna(inplace = True);
     eoddf.columns =['Date','Open','High','Low','Close','Volume']
     eoddf.sort_values(by='Date', ascending=True, inplace = True)
-    eoddf = eoddf[eoddf['5. volume']>1];
+    eoddf = eoddf[eoddf['Volume']>1];
     #fdf.to_csv('PUT THE PATH HERE',sep = ',');
-    eoddf.to_csv('C:\\Python Exercises\\DataFiles\\EODData.csv',sep = ',');
+    eoddf.to_csv('C:\\Python Exercises\\DataFiles\\'+symbol+'_EODData.csv',sep = ',');
                   
 #INTRADAY DATA
 def intraday(symbol,intratimeframe):
@@ -42,7 +42,7 @@ def intraday(symbol,intratimeframe):
     intradf.dropna(inplace = True);
     intradf.columns =['Date','Open','High','Low','Close','Volume']
     intradf.sort_values(by='Date', ascending=True, inplace = True)
-    intradf.to_csv('C:\\Python Exercises\\DataFiles\\IntradayData.csv',sep = ',');
+    intradf.to_csv('C:\\Python Exercises\\DataFiles\\'+symbol+intratimeframe+'_IntradayData.csv',sep = ',');
 
 
 
