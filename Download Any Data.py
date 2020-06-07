@@ -20,7 +20,7 @@ if scripname == "^NSEI":
 elif scripname == "^NSEBANK":
     symbol = scripname
 else:
-   symbol = "NSE:"+scripname
+   symbol = scripname+".NS"
     
 ts = TimeSeries(key = api_key,output_format = 'pandas', indexing_type='integer');
 
